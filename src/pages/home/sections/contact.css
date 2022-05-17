@@ -14,6 +14,7 @@
 .hm-contact-copy-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 @media screen and (min-width: 391px) {

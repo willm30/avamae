@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-position: -167px -5px;
   height: 50vh;
+  min-height: 475px;
   justify-content: center;
 }
 

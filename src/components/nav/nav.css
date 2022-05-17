@@ -23,7 +23,7 @@ nav {
 }
 
 #Logo {
-  transform: scale(0.6);
+  width: 176px;
 }
 
 @media screen and (min-width: 391px) {
@@ -35,11 +35,6 @@ nav {
     grid-area: nav;
     border-bottom: 1px solid #dedede;
     padding: 2px;
-  }
-
-  #Logo {
-    min-width: 170px;
-    transform: scale(1);
   }
 
   .logo-container {
