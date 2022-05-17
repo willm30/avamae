@@ -1,0 +1,33 @@
+.unsubmitted,
+.loading {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.unsubmitted span,
+.loading span {
+  flex-grow: 1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#Submit {
+  height: 15px;
+  width: 15px;
+}
+
+#Spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

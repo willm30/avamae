@@ -1,0 +1,22 @@
+@media screen and (min-width: 391px) {
+  .about {
+    grid-area: main;
+    display: grid;
+    grid-template:
+      "left content right" auto
+      / 17% 1fr 11.5%;
+  }
+
+  .about-img {
+    max-width: 55%;
+    height: auto;
+    border-radius: 2px;
+    align-self: center;
+  }
+
+  .about-content {
+    grid-area: content;
+    padding: 0 0;
+    gap: 25px;
+  }
+}

@@ -1,0 +1,42 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.75rem;
+}
+
+.text-input {
+  background-color: #f8f9fc;
+  border: 1px solid #dedede;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.optional {
+  font-style: italic;
+  color: #a4a4a4;
+}
+
+.checkbox {
+  flex-direction: row;
+  gap: 5px;
+}
+
+.check {
+  order: -1;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.err-msg {
+  color: red;
+  font-style: italic;
+}
+
+@media screen and (min-width: 391px) {
+  .label {
+    flex-grow: 1;
+  }
+}

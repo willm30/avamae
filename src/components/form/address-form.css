@@ -1,0 +1,52 @@
+.address {
+  display: grid;
+  grid-template:
+    "one" auto
+    "two" auto
+    / 1fr;
+  gap: 20px;
+}
+
+.address-line1 {
+  grid-area: one;
+}
+
+.address-line2 {
+  grid-area: two;
+  display: grid;
+  grid-template:
+    "a b" auto
+    / 1fr 1fr;
+  min-width: 0;
+  gap: 20px;
+}
+
+.pc-country,
+.town-state,
+.address-line1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.town-state {
+  grid-area: a;
+  min-width: 0;
+}
+.pc-country {
+  grid-area: b;
+  min-width: 0;
+}
+
+.address-line2 .text-input {
+  width: 80%;
+}
+
+@media screen and (min-width: 391px) {
+  .pc-country,
+  .town-state,
+  .address-line1 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

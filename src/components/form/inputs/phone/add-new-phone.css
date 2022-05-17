@@ -1,0 +1,11 @@
+.add-new {
+  width: 100%;
+  background-color: #eff7ff;
+  border: 0;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+  color: #4c8bc0;
+  font-size: 0.75rem;
+  font-weight: 600;
+}

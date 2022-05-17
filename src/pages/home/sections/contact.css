@@ -1,0 +1,30 @@
+.hm-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hm-contact-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hm-contact-copy-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 391px) {
+  .hm-contact {
+    grid-area: contact;
+    padding: 60px 0px;
+    gap: 30px;
+  }
+
+  .hm-contact-copy-wrapper {
+    flex-direction: row;
+    gap: 30px;
+  }
+}

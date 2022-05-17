@@ -1,0 +1,12 @@
+@media screen and (min-width: 391px) {
+  .home {
+    display: grid;
+    grid-area: main;
+    grid-template:
+      "left slider right" auto
+      "left learn right" auto
+      "left login right" auto
+      "left contact right" auto
+      / 17% 1fr 11.5%;
+  }
+}

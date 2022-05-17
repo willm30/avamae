@@ -1,0 +1,58 @@
+nav {
+  display: grid;
+  grid-template:
+    "left logo right" auto
+    / 3rem 1fr 3rem;
+  min-height: 3.5rem;
+  border-bottom: 1px solid #dedede;
+}
+
+.logo-container {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Logo {
+  transform: scale(0.6);
+}
+
+@media screen and (min-width: 391px) {
+  nav {
+    display: grid;
+    grid-template:
+      "left logo menu right" auto
+      / 17% 1fr 1fr 11.5%;
+    grid-area: nav;
+    border-bottom: 1px solid #dedede;
+    padding: 2px;
+  }
+
+  #Logo {
+    min-width: 170px;
+    transform: scale(1);
+  }
+
+  .logo-container {
+    grid-area: logo;
+    justify-content: flex-start;
+  }
+
+  .logo-container a {
+    height: auto;
+    width: auto;
+  }
+
+  .nav-menu {
+    grid-area: menu;
+  }
+}

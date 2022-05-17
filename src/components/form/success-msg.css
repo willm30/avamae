@@ -1,0 +1,40 @@
+#Valid,
+#Arrow {
+  height: 25px;
+  width: 25px;
+}
+
+.success-icn {
+  background-color: #8ec73d;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-msg {
+  background-color: #e9f4da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.success-msg-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.success-msg-text-wrapper h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+}
+
+.success-msg-text-wrapper span {
+  font-size: 0.75rem;
+}

@@ -1,0 +1,41 @@
+.hm-login {
+  background-image: url("../../../images/no_hat.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -167px -5px;
+  height: 50vh;
+  justify-content: center;
+}
+
+.hm-login-overlay {
+  background-color: rgba(0, 0, 0, 0.47);
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (min-width: 391px) {
+  .hm-login {
+    grid-area: login;
+    grid-column: 1 / 4;
+    background-position: -18px -55px;
+    background-size: 108%;
+    display: grid;
+    grid-template:
+      "a b c d" auto
+      / 17% 1.35fr 1fr 1fr;
+    padding: 20px 0px;
+    align-items: center;
+    gap: 0;
+  }
+
+  .hm-login-overlay {
+    grid-area: b;
+    background-color: #635b57;
+    height: fit-content;
+    padding: 30px;
+  }
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/layout/Layout";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
+import Home from "./pages/home/Home";
+import getImgs from "./services/getImages";
 
-function App() {
+export default function App() {
+  // Store images in app memory to prevent multiple requests
+  // when switching between pages.
+  const [imgs, setImgs] = useState();
+
+  useEffect(() => {
+    getImgs(setImgs);
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" index element={<Home {...{ imgs }} />} />
+          <Route path="about-us" element={<About />} />
+          <Route path="contact-us" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
