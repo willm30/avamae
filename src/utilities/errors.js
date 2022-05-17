@@ -17,5 +17,5 @@ export function isError(errors, id) {
 }
 
 export function addSpace(str) {
-  return str.replace("_", " ");
+  return str.replace(/_/g, " ");
 }

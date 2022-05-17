@@ -21,7 +21,7 @@ export function validateTel(e, n, errors, setErrors) {
   }
 }
 
-export function validatePostcode(e, errors, setErrors) {
+export function removeErrMsg(e, errors, setErrors) {
   const { id } = e.target;
   const updatedErrs = errors ? errors.filter((e) => !e[id]) : [];
   setErrors(updatedErrs);

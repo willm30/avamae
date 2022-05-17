@@ -1,8 +1,4 @@
-import {
-  labelToId,
-  validateName,
-  validatePostcode,
-} from "../../../utilities/form";
+import { labelToId, validateName, removeErrMsg } from "../../../utilities/form";
 import Input from "./Input";
 
 export default function TextInput({
@@ -19,13 +15,14 @@ export default function TextInput({
   const id = labelToId(label);
   const [formVals, setFormVals] = formState;
   if (focus || type == "email") blur = false;
+  focus = true;
 
   return (
     <Input
       {...{ label, type, id, errors, optional }}
       onChange={handleChange ? handleChange : handleAddressChange}
       onBlur={blur ? (e) => validateName(e, errors, setErrors) : null}
-      onFocus={focus ? (e) => validatePostcode(e, errors, setErrors) : null}
+      onFocus={focus ? (e) => removeErrMsg(e, errors, setErrors) : null}
     />
   );
 
